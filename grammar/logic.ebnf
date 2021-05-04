@@ -1,0 +1,59 @@
+@@grammar::LOGIC
+
+
+start
+	=
+	expression $
+	;
+
+expression
+	=
+	| _and
+	| _or
+	| _inter
+	| _biinter
+	| _not
+	;
+
+subexpression
+	=
+	| sub:factor
+	| '(' ~ sub:expression ')'
+	;
+	
+factor
+	=
+	| atom:variable
+	| atom:'0'
+	| atom:'1'
+	;	
+
+variable
+	=
+	atom:/x[0-9]+/
+	;
+		
+_and
+	=
+	left:subexpression op:'^'  ~ right:subexpression
+	;
+
+_or
+	=
+	left:subexpression op:'v' ~ right:subexpression
+	;
+
+_inter
+	=
+	left:subexpression op:'->' ~ right:subexpression
+	;
+
+_biinter
+	=
+	left:subexpression op:'<->' ~ right:subexpression
+	;
+
+_not
+	=
+	'!' ~ atom:subexpression
+	;

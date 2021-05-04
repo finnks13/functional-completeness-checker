@@ -1,0 +1,7 @@
+{"name": "false", "formula": "0", "noVars": 0, "inputVals": [], "truthVals": [false], "truthClasses": [false, true, true, true, false]}
+{"name": "true", "formula": "1", "noVars": 0, "inputVals": [], "truthVals": [true], "truthClasses": [true, false, true, true, false]}
+{"name": "or", "formula": "x1 v x2", "noVars": 2, "inputVals": [[0, 0], [0, 1], [1, 0], [1, 1]], "truthVals": [false, true, true, true], "truthClasses": [true, true, false, true, false]}
+{"name": "and", "formula": "x1 ^ x2", "noVars": 2, "inputVals": [[0, 0], [0, 1], [1, 0], [1, 1]], "truthVals": [false, false, false, true], "truthClasses": [true, true, false, true, false]}
+{"name": "not", "formula": "!x1", "noVars": 1, "inputVals": [[0], [1]], "truthVals": [true, false], "truthClasses": [false, false, true, false, true]}
+{"name": "implication", "formula": "x1 -> x2", "noVars": 2, "inputVals": [[0, 0], [0, 1], [1, 0], [1, 1]], "truthVals": [true, true, false, true], "truthClasses": [true, false, false, false, false]}
+{"name": "bi-implication", "formula": "x1 <-> x2", "noVars": 2, "inputVals": [[0, 0], [0, 1], [1, 0], [1, 1]], "truthVals": [true, false, false, true], "truthClasses": [true, false, true, false, false]}
